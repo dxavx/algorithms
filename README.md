@@ -1,1 +1,1 @@
-# algorithms_search
+# algorithms search for Golang
