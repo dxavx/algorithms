@@ -10,15 +10,20 @@ import (
 
 func main() {
 
-	// ----
+	// ---- Binary Sort
 	var x = MakeArray(10) 				// new array of 10 zeros
 	fmt.Println(x) 							// viewing an empty array
-	//fmt.Println(&x[0]) 					// address of the first element
 	RandonFillArray(x, 100) 	// filling an array with random numbers
 	fmt.Println(x) 							// viewing an empty array
 	sort.Ints(x)							// sorting array
 	fmt.Println(x)							// viewing an sorting array
 	fmt.Println(BinarySearch(x,50)) 	// search "50" in array
+
+	// ---- Select Sort
+	var x1 = MakeArray(20)
+	RandonFillArray(x1,1000)
+	fmt.Println(x1)
+	fmt.Println(SelectorSort(x1))
 }
 
 											// creating an empty array
@@ -29,7 +34,6 @@ func MakeArray (size int) ([]int) {
 											// illing an array with random numbers
 func RandonFillArray (arr []int , range_random int) []int {
 
-	//fmt.Println(&arr[0])
 	rand.Seed(time.Now().Unix())
 	for i := 0 ; i < len(arr); i++  {
 		arr[i] = rand.Intn(range_random)
@@ -39,7 +43,6 @@ func RandonFillArray (arr []int , range_random int) []int {
 
 func BinarySearch (arr []int, item int) int {
 
-	//fmt.Println(&arr[0])
 	low := 0 								// lower bound of range
 	high := len(arr) - 1 					// height bound of range
 
@@ -48,20 +51,23 @@ func BinarySearch (arr []int, item int) int {
 		guess := arr[mid]
 		if guess == item { return mid }
 		if guess > item { high = mid - 1 } else { low = mid + 1 }
-		fmt.Println(low, high)
 	}
 	return -1
 }
+											// Selection sort
+func SelectorSort (arr []int) []int {
 
-func Smallest (arr []int) int {
-	smallest := arr[0]
-	smallest_index := 0
-	for i,  _ := range arr {
-		if arr[i] < smallest {
-			smallest = arr[i]
-			smallest_index = i
+	for i := 0 ; i < len(arr) -1 ; i++ {
+		var min  = i
+		for j := i + 1 ; j < len(arr); j++ {
+			if arr[j] < arr[min] {
+				min = j
+			}
 		}
-		return smallest_index
+		var tmp = arr[i]
+		arr[i] = arr[min]
+		arr[min] = tmp
 	}
-	return smallest_index
+	return arr
 }
+
