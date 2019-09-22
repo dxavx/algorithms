@@ -1,1 +1,6 @@
-# algorithms search for Golang
+# Algorithms for Golang
+- Binary Sort
+- Select Sort
+- Recursive
+- Quick Sort
+

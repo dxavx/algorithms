@@ -13,7 +13,7 @@ func main() {
 	// ---- Binary Sort
 	var x = MakeArray(10) 				// new array of 10 zeros
 	fmt.Println(x) 							// viewing an empty array
-	RandonFillArray(x, 100) 	// filling an array with random numbers
+	RandomFillArray(x, 100) 	// filling an array with random numbers
 	fmt.Println(x) 							// viewing an empty array
 	sort.Ints(x)							// sorting array
 	fmt.Println(x)							// viewing an sorting array
@@ -21,7 +21,7 @@ func main() {
 
 	// ---- Select Sort
 	var x1 = MakeArray(20)
-	RandonFillArray(x1,1000)
+	RandomFillArray(x1,1000)
 	fmt.Println(x1)
 	fmt.Println(SelectorSort(x1))
 
@@ -30,19 +30,25 @@ func main() {
 
 	//------- Fact
 	fmt.Println(Fact(7))
+
+	//------- Quick Sort
+	var x2 = MakeArray(10)
+	RandomFillArray(x2,1000)
+	fmt.Println(x2)
+	fmt.Println(QuickSort(x2))
 }
 
 											// creating an empty array
-func MakeArray (size int) ([]int) {
+func MakeArray (size int) []int {
 	x := make([]int,size)
 	return x
 }
-											// illing an array with random numbers
-func RandonFillArray (arr []int , range_random int) []int {
+											// Filling an array with random numbers
+func RandomFillArray (arr []int , rangeRandom int) []int {
 
 	rand.Seed(time.Now().Unix())
 	for i := 0 ; i < len(arr); i++  {
-		arr[i] = rand.Intn(range_random)
+		arr[i] = rand.Intn(rangeRandom)
 	}
 	return arr
 }
@@ -93,3 +99,29 @@ func Fact(x int) int {
 		return  x * Fact(x-1)
 	}
 }
+
+func QuickSort (arr []int) []int{
+
+	if len(arr) < 2 {
+		return arr
+	}
+
+	left, right := 0, len(arr)-1
+	pivot := rand.Int() % len(arr)
+	fmt.Println(pivot)
+	arr[pivot], arr[right] = arr[right], arr[pivot]
+
+	for i := range arr {
+		if arr[i] < arr[right] {
+			arr[left], arr[i] = arr[i], arr[left]
+			left++
+		}
+	}
+	arr[left], arr[right] = arr[right], arr[left]
+
+	QuickSort(arr[:left])
+	QuickSort(arr[left+1:])
+
+	return arr
+}
+
