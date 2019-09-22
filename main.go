@@ -17,13 +17,19 @@ func main() {
 	fmt.Println(x) 							// viewing an empty array
 	sort.Ints(x)							// sorting array
 	fmt.Println(x)							// viewing an sorting array
-	fmt.Println(BinarySearch(x,50)) 	// search "50" in array
+	fmt.Println(BinarySearch(x,50)) 	// search index "50" in array
 
 	// ---- Select Sort
 	var x1 = MakeArray(20)
 	RandonFillArray(x1,1000)
 	fmt.Println(x1)
 	fmt.Println(SelectorSort(x1))
+
+	// ------ Recursive
+	Recursive(30)
+
+	//------- Fact
+	fmt.Println(Fact(7))
 }
 
 											// creating an empty array
@@ -71,3 +77,19 @@ func SelectorSort (arr []int) []int {
 	return arr
 }
 
+func Recursive ( i int) {
+	fmt.Println(i)
+	if i <= 0 {
+		return
+	} else {
+		Recursive(i-1)
+	}
+}
+
+func Fact(x int) int {
+	if x == 1 {
+		return 1
+	} else {
+		return  x * Fact(x-1)
+	}
+}
