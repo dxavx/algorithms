@@ -36,6 +36,27 @@ func main() {
 	RandomFillArray(x2,1000)
 	fmt.Println(x2)
 	fmt.Println(QuickSort(x2))
+
+	//----- Hash ------
+	m := make(map[string]int)
+	m1 := new(map[string]int)
+	var m2 map[string]int
+	m3 := map[string]int{"apple":99, "orange":100}
+
+	// Insert data
+	m3["carrot"] = 101
+
+	// Delete data
+	delete(m3, "apple")
+
+	// Search data
+	xx , aa := m3["orange"]
+	fmt.Println("target value" ,xx ,aa)
+
+	//
+
+
+	fmt.Println(m,m1,m2,m3)
 }
 
 											// creating an empty array
