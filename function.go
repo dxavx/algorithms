@@ -7,71 +7,6 @@ import (
 	"time"
 )
 
-func main() {
-
-	// ---- Binary Sort
-	var x = MakeArray(10)            // new array of 10 zeros
-	fmt.Println(x)                   // viewing an empty array
-	RandomFillArray(x, 100)          // filling an array with random numbers
-	fmt.Println(x)                   // viewing an empty array
-	sort.Ints(x)                     // sorting array
-	fmt.Println(x)                   // viewing an sorting array
-	fmt.Println(BinarySearch(x, 50)) // search index "50" in array
-
-	// ---- Select Sort
-	var x1 = MakeArray(20)
-	RandomFillArray(x1, 1000)
-	fmt.Println(x1)
-	fmt.Println(SelectorSort(x1))
-
-	// ------ Recursive
-	Recursive(30)
-
-	//------- Fact
-	fmt.Println(Fact(7))
-
-	//------- Quick Sort
-	var x2 = MakeArray(10)
-	RandomFillArray(x2, 1000)
-	fmt.Println(x2)
-	fmt.Println(QuickSort(x2))
-
-	//----- Hash -------------
-	m := make(map[string]int)
-	m1 := new(map[string]int)
-	var m2 map[string]int
-	m3 := map[string]int{"apple": 99, "orange": 100}
-
-	// Insert data
-	m3["carrot"] = 101
-
-	// Delete data
-	delete(m3, "apple")
-
-	// Search data
-	xx, aa := m3["orange"]
-	fmt.Println("target value", xx, aa)
-
-	fmt.Println(m, m1, m2, m3)
-	//-------------------------
-
-	// ---- Graph ---------------
-	graph := make(map[string][]string)
-	c := make(chan string, 300)
-
-	graph["you"] = []string{"video", "audio", "tv"}
-	graph["pat"] = []string{"js", "php", "nodajs"}
-	graph["danya"] = []string{"qa", "test", "graph"}
-	graph["max"] = []string{}
-
-	fmt.Println("Test Graph", graph)
-	// Pipe
-	c <- graph["you"][0]
-	fmt.Println(<-c)
-
-	//---------------------------
-}
-
 // creating an empty array
 func MakeArray(size int) []int {
 	x := make([]int, size)
@@ -165,4 +100,70 @@ func QuickSort(arr []int) []int {
 	QuickSort(arr[left+1:])
 
 	return arr
+}
+
+func Example() {
+
+	// ---- Binary Sort
+	var x = MakeArray(10)            // new array of 10 zeros
+	fmt.Println(x)                   // viewing an empty array
+	RandomFillArray(x, 100)          // filling an array with random numbers
+	fmt.Println(x)                   // viewing an empty array
+	sort.Ints(x)                     // sorting array
+	fmt.Println(x)                   // viewing an sorting array
+	fmt.Println(BinarySearch(x, 50)) // search index "50" in array
+
+	// ---- Select Sort
+	var x1 = MakeArray(20)
+	RandomFillArray(x1, 1000)
+	fmt.Println(x1)
+	fmt.Println(SelectorSort(x1))
+
+	// ------ Recursive
+	Recursive(30)
+
+	//------- Fact
+	fmt.Println(Fact(7))
+
+	//------- Quick Sort
+	var x2 = MakeArray(10)
+	RandomFillArray(x2, 1000)
+	fmt.Println(x2)
+	fmt.Println(QuickSort(x2))
+
+	//----- Hash -------------
+	m := make(map[string]int)
+	m1 := new(map[string]int)
+	var m2 map[string]int
+	m3 := map[string]int{"apple": 99, "orange": 100}
+
+	// Insert data
+	m3["carrot"] = 101
+
+	// Delete data
+	delete(m3, "apple")
+
+	// Search data
+	xx, aa := m3["orange"]
+	fmt.Println("target value", xx, aa)
+
+	fmt.Println(m, m1, m2, m3)
+	//-------------------------
+
+	// ---- Graph ---------------
+	graph := make(map[string][]string)
+	c := make(chan string, 300)
+
+	graph["you"] = []string{"video", "audio", "tv"}
+	graph["pat"] = []string{"js", "php", "nodajs"}
+	graph["danya"] = []string{"qa", "test", "graph"}
+	graph["max"] = []string{}
+
+	fmt.Println("Test Graph", graph)
+	// Pipe
+	c <- graph["you"][0]
+	fmt.Println(<-c)
+
+	//---------------------------
+
 }
