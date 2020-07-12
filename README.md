@@ -7,6 +7,10 @@
 - Recursive
 - Quick Sort
 
+***
+
+![Go](https://github.com/AlexanderOkhrimenko/algorithms/workflows/Go/badge.svg?branch=master)
+
 ## Пример создания Go модуля с различными алгоритмами сортировки 
 
 - Бинарная сортировка
