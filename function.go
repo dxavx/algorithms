@@ -83,7 +83,7 @@ func Fact(x int) int {
 	}
 }
 
-// QuickSort
+// QuickSort , fast sorting
 func QuickSort(arr []int) []int {
 
 	if len(arr) < 2 {
