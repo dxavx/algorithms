@@ -6,13 +6,13 @@ import (
 	"time"
 )
 
-// creating an empty array
+// MakeArray creating an empty array
 func MakeArray(size int) []int {
 	x := make([]int, size)
 	return x
 }
 
-// Filling an array with random numbers
+// RandomFillArray filling an array with random numbers
 func RandomFillArray(arr []int, rangeRandom int) []int {
 
 	rand.Seed(time.Now().Unix())
@@ -22,13 +22,12 @@ func RandomFillArray(arr []int, rangeRandom int) []int {
 	return arr
 }
 
-// Binary Search
+// BinarySearch
 func BinarySearch(arr []int, item int) int {
 
 	low := 0
 	high := len(arr) - 1
 
-	// Sort array
 	SelectorSort(arr)
 
 	for low <= high {
@@ -48,7 +47,7 @@ func BinarySearch(arr []int, item int) int {
 	return -1
 }
 
-// Selection sort
+// SelectorSort
 func SelectorSort(arr []int) []int {
 
 	for i := 0; i < len(arr)-1; i++ {
@@ -65,6 +64,7 @@ func SelectorSort(arr []int) []int {
 	return arr
 }
 
+// Recursive search
 func Recursive(i int) {
 	fmt.Println(i)
 	if i <= 0 {
@@ -74,6 +74,7 @@ func Recursive(i int) {
 	}
 }
 
+// Fact calc
 func Fact(x int) int {
 	if x == 1 {
 		return 1
@@ -82,6 +83,7 @@ func Fact(x int) int {
 	}
 }
 
+// QuickSort
 func QuickSort(arr []int) []int {
 
 	if len(arr) < 2 {
