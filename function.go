@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// MakeArray creating an empty array
+// MakeArray creating an empty array,
 // size , return x.
 func MakeArray(size int) []int {
 	x := make([]int, size)
@@ -25,8 +25,8 @@ func RandomFillArray(arr []int, rangeRandom int) []int {
 	return arr
 }
 
-// BinarySearch sorting array, arr is input array.
-// item search value , return arr
+// BinarySearch sorting array, arr is input array,
+// item search value , return arr.
 func BinarySearch(arr []int, item int) int {
 
 	low := 0
@@ -114,7 +114,7 @@ func QuickSort(arr []int) []int {
 	return arr
 }
 
-// Example test usage
+// Example test usage.
 func Example() {
 
 	// ------ Recursive
