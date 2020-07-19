@@ -33,3 +33,7 @@ func TestBinarySearch(t *testing.T) {
 	position := BinarySearch(arr, value)
 	assert.Equal(t, value, arr[position])
 }
+
+func TestFact(t *testing.T) {
+	assert.Equal(t, 5040, Fact(7))
+}

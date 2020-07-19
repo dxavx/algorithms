@@ -1,3 +1,5 @@
+// algorithms package demonstrates some basic algorithms
+// Binary Sort , Select Sort , Recursive , Quick Sort , Hash table
 package algorithms
 
 import (
@@ -111,17 +113,8 @@ func QuickSort(arr []int) []int {
 
 func Example() {
 
-	// ---- Select Sort
-	var x1 = MakeArray(20)
-	RandomFillArray(x1, 1000)
-	fmt.Println(x1)
-	fmt.Println(SelectorSort(x1))
-
 	// ------ Recursive
 	Recursive(30)
-
-	//------- Fact
-	fmt.Println(Fact(7))
 
 	//------- Quick Sort
 	var x2 = MakeArray(10)
@@ -146,7 +139,6 @@ func Example() {
 	fmt.Println("target value", xx, aa)
 
 	fmt.Println(m, m1, m2, m3)
-	//-------------------------
 
 	// ---- Graph ---------------
 	graph := make(map[string][]string)
@@ -161,7 +153,4 @@ func Example() {
 	// Pipe
 	c <- graph["you"][0]
 	fmt.Println(<-c)
-
-	//---------------------------
-
 }
