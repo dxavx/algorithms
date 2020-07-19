@@ -1,9 +1,8 @@
 package algorithms
 
 import (
-	"testing"
-
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestMakeArray(t *testing.T) {
@@ -19,6 +18,18 @@ func TestRandomFillArray(t *testing.T) {
 	if nm[0] != nm[1] {
 		value = true
 	}
-
 	assert.True(t, value)
+}
+
+func TestBinarySearch(t *testing.T) {
+
+	index := 3
+	value := 555
+
+	arr := RandomFillArray(MakeArray(100), 100)
+
+	arr[index] = value
+
+	position := BinarySearch(arr, value)
+	assert.Equal(t, value, arr[position])
 }

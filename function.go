@@ -3,7 +3,6 @@ package algorithms
 import (
 	"fmt"
 	"math/rand"
-	"sort"
 	"time"
 )
 
@@ -23,14 +22,20 @@ func RandomFillArray(arr []int, rangeRandom int) []int {
 	return arr
 }
 
+// Binary Search
 func BinarySearch(arr []int, item int) int {
 
-	low := 0             // lower bound of range
-	high := len(arr) - 1 // height bound of range
+	low := 0
+	high := len(arr) - 1
+
+	// Sort array
+	SelectorSort(arr)
 
 	for low <= high {
-		mid := (low + high) / 2 // reduce the search range
+
+		mid := (low + high) / 2
 		guess := arr[mid]
+
 		if guess == item {
 			return mid
 		}
@@ -103,15 +108,6 @@ func QuickSort(arr []int) []int {
 }
 
 func Example() {
-
-	// ---- Binary Sort
-	var x = MakeArray(10)            // new array of 10 zeros
-	fmt.Println(x)                   // viewing an empty array
-	RandomFillArray(x, 100)          // filling an array with random numbers
-	fmt.Println(x)                   // viewing an empty array
-	sort.Ints(x)                     // sorting array
-	fmt.Println(x)                   // viewing an sorting array
-	fmt.Println(BinarySearch(x, 50)) // search index "50" in array
 
 	// ---- Select Sort
 	var x1 = MakeArray(20)
