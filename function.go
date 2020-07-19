@@ -1,4 +1,4 @@
-// algorithms package demonstrates some basic algorithms
+// Package algorithms package demonstrates some basic algorithms
 // Binary Sort , Select Sort , Recursive , Quick Sort , Hash table
 package algorithms
 
@@ -25,7 +25,8 @@ func RandomFillArray(arr []int, rangeRandom int) []int {
 	return arr
 }
 
-// BinarySearch
+// BinarySearch sorting array, arr is input array.
+// item search value , return arr
 func BinarySearch(arr []int, item int) int {
 
 	low := 0
@@ -50,7 +51,8 @@ func BinarySearch(arr []int, item int) int {
 	return -1
 }
 
-// SelectorSort
+// SelectorSort sorting array, arr is input array.
+// return arr
 func SelectorSort(arr []int) []int {
 
 	for i := 0; i < len(arr)-1; i++ {
@@ -112,6 +114,7 @@ func QuickSort(arr []int) []int {
 	return arr
 }
 
+// Example test usage
 func Example() {
 
 	// ------ Recursive
