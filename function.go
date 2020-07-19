@@ -8,8 +8,7 @@ import (
 	"time"
 )
 
-// MakeArray creating an empty array,
-// size , return x.
+// MakeArray creating an empty array, size , return x.
 func MakeArray(size int) []int {
 	x := make([]int, size)
 	return x
@@ -88,7 +87,7 @@ func Fact(x int) int {
 	}
 }
 
-// QuickSort , fast sorting
+// QuickSort is fast sorting.
 func QuickSort(arr []int) []int {
 
 	if len(arr) < 2 {
@@ -116,9 +115,6 @@ func QuickSort(arr []int) []int {
 
 // Example test usage.
 func Example() {
-
-	// ------ Recursive
-	Recursive(30)
 
 	//------- Quick Sort
 	var x2 = MakeArray(10)
