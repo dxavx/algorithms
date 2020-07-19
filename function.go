@@ -8,8 +8,8 @@ import (
 	"time"
 )
 
-// MakeArray creating an empty array.
-// test test test.
+// MakeArray creating an empty array
+// size , return x.
 func MakeArray(size int) []int {
 	x := make([]int, size)
 	return x
