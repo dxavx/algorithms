@@ -3,6 +3,7 @@
 
 ## Example of creating a Go module with different sorting algorithms
 
+- Generating an array with random values
 - Binary Sort
 - Select Sort
 - Recursive
@@ -13,6 +14,7 @@
 
 ## Пример создания Go модуля с различными алгоритмами сортировки 
 
+- Генерация массива со случайными значениями
 - Бинарная сортировка
 - Сортировка выбором 
 - Сортировка с помощью рекурсии
