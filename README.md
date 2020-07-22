@@ -1,5 +1,6 @@
 ![Go](https://github.com/AlexanderOkhrimenko/algorithms/workflows/Go/badge.svg?branch=master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/AlexanderOkhrimenko/algorithms)](https://goreportcard.com/report/github.com/AlexanderOkhrimenko/algorithms)
+[![GoDoc](https://godoc.org/github.com/AlexanderOkhrimenko/algorithms?status.svg)](https://godoc.org/github.com/AlexanderOkhrimenko/algorithms>)
 
 ## Example of creating a Go module with different sorting algorithms
 
