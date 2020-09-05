@@ -37,3 +37,10 @@ func TestBinarySearch(t *testing.T) {
 func TestFact(t *testing.T) {
 	assert.Equal(t, 5040, Fact(7))
 }
+
+func TestMinMax(t *testing.T) {
+	aaa := []float64{4.0, 34, -28883, 25, 32, 324, -23, 2, -333, 0, 99, 88888}
+	min, max := MinMax(aaa)
+	assert.Equal(t, min, aaa[2])
+	assert.Equal(t, max, aaa[11])
+}

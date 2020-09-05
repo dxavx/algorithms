@@ -113,6 +113,19 @@ func QuickSort(arr []int) []int {
 	return arr
 }
 
+// MinMax is finds the minimum and maximum elements in the array.
+func MinMax(array []float64) (min float64, max float64) {
+	for _, n := range array {
+		if n < min {
+			min = n
+		}
+		if n > max {
+			max = n
+		}
+	}
+	return min, max
+}
+
 // Example test usage.
 func Example() {
 
