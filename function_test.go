@@ -1,6 +1,7 @@
 package algorithms
 
 import (
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -54,4 +55,12 @@ func TestSelectorSort(t *testing.T) {
 
 func TestRecursive(t *testing.T) {
 	assert.Equal(t, 0, Recursive(10))
+}
+
+func TestQuickSort(t *testing.T) {
+	a := []int{13, 45, 889, 98, 56, 78, 8}
+	sortArray := []int{8, 13, 45, 56, 78, 98, 889}
+	resultArray := QuickSort(a)
+	fmt.Println(resultArray)
+	assert.Equal(t, sortArray, resultArray)
 }

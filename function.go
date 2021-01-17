@@ -97,7 +97,7 @@ func QuickSort(arr []int) []int {
 
 	left, right := 0, len(arr)-1
 	pivot := rand.Int() % len(arr)
-	fmt.Println(pivot)
+	//fmt.Println(pivot)
 	arr[pivot], arr[right] = arr[right], arr[pivot]
 
 	for i := range arr {
