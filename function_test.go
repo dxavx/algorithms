@@ -44,3 +44,14 @@ func TestMinMax(t *testing.T) {
 	assert.Equal(t, min, aaa[2])
 	assert.Equal(t, max, aaa[11])
 }
+
+func TestSelectorSort(t *testing.T) {
+	a := []int{13, 45, 889, 98, 56, 78, 8}
+	sortArray := []int{8, 13, 45, 56, 78, 98, 889}
+	resultArray := SelectorSort(a)
+	assert.Equal(t, sortArray, resultArray)
+}
+
+func TestRecursive(t *testing.T) {
+	assert.Equal(t, 0, Recursive(10))
+}

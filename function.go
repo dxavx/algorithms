@@ -69,13 +69,14 @@ func SelectorSort(arr []int) []int {
 }
 
 // Recursive search
-func Recursive(i int) {
+func Recursive(i int) int {
 	fmt.Println(i)
-	if i <= 0 {
-		return
+	if i == 0 {
+		return 10
 	} else {
 		Recursive(i - 1)
 	}
+	return 0
 }
 
 // Fact calc
@@ -127,43 +128,43 @@ func MinMax(array []float64) (min float64, max float64) {
 }
 
 // Example test usage.
-func Example() {
-
-	//------- Quick Sort
-	var x2 = MakeArray(10)
-	RandomFillArray(x2, 1000)
-	fmt.Println(x2)
-	fmt.Println(QuickSort(x2))
-
-	//----- Hash -------------
-	m := make(map[string]int)
-	m1 := new(map[string]int)
-	var m2 map[string]int
-	m3 := map[string]int{"apple": 99, "orange": 100}
-
-	// Insert data
-	m3["carrot"] = 101
-
-	// Delete data
-	delete(m3, "apple")
-
-	// Search data
-	xx, aa := m3["orange"]
-	fmt.Println("target value", xx, aa)
-
-	fmt.Println(m, m1, m2, m3)
-
-	// ---- Graph ---------------
-	graph := make(map[string][]string)
-	c := make(chan string, 300)
-
-	graph["you"] = []string{"video", "audio", "tv"}
-	graph["pat"] = []string{"js", "php", "nodajs"}
-	graph["danya"] = []string{"qa", "test", "graph"}
-	graph["max"] = []string{}
-
-	fmt.Println("Test Graph", graph)
-	// Pipe
-	c <- graph["you"][0]
-	fmt.Println(<-c)
-}
+//func Example() {
+//
+//	//------- Quick Sort
+//	var x2 = MakeArray(10)
+//	RandomFillArray(x2, 1000)
+//	fmt.Println(x2)
+//	fmt.Println(QuickSort(x2))
+//
+//	//----- Hash -------------
+//	m := make(map[string]int)
+//	m1 := new(map[string]int)
+//	var m2 map[string]int
+//	m3 := map[string]int{"apple": 99, "orange": 100}
+//
+//	// Insert data
+//	m3["carrot"] = 101
+//
+//	// Delete data
+//	delete(m3, "apple")
+//
+//	// Search data
+//	xx, aa := m3["orange"]
+//	fmt.Println("target value", xx, aa)
+//
+//	fmt.Println(m, m1, m2, m3)
+//
+//	// ---- Graph ---------------
+//	graph := make(map[string][]string)
+//	c := make(chan string, 300)
+//
+//	graph["you"] = []string{"video", "audio", "tv"}
+//	graph["pat"] = []string{"js", "php", "nodajs"}
+//	graph["danya"] = []string{"qa", "test", "graph"}
+//	graph["max"] = []string{}
+//
+//	fmt.Println("Test Graph", graph)
+//	// Pipe
+//	c <- graph["you"][0]
+//	fmt.Println(<-c)
+//}
