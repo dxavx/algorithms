@@ -1,6 +1,6 @@
-![Go](https://github.com/AlexanderOkhrimenko/algorithms/workflows/Go/badge.svg?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/AlexanderOkhrimenko/algorithms)](https://goreportcard.com/report/github.com/AlexanderOkhrimenko/algorithms)
-[![GoDoc](https://godoc.org/github.com/AlexanderOkhrimenko/algorithms?status.svg)](https://godoc.org/github.com/AlexanderOkhrimenko/algorithms)
+![Go](https://github.com/dxavx/algorithms/workflows/Go/badge.svg?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dxavx/algorithms)](https://goreportcard.com/report/github.com/dxavx/algorithms)
+[![GoDoc](https://godoc.org/github.com/AlexanderOkhrimenko/algorithms?status.svg)](https://godoc.org/github.com/dxavx/algorithms)
 
 
 
@@ -14,14 +14,3 @@
 - MinMax 
 
 ***
-
-
-## Пример создания Go модуля с различными алгоритмами сортировки 
-
-- Генерация массива со случайными значениями
-- Бинарная сортировка
-- Сортировка выбором 
-- Сортировка с помощью рекурсии
-- Быстрая сортировка 
-- Минимальный и максимальный элементы массива
-
