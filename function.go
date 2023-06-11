@@ -5,7 +5,6 @@ package algorithms
 import (
 	"fmt"
 	"math/rand"
-	"time"
 )
 
 // MakeArray creating an empty array, size , return x.
@@ -17,7 +16,6 @@ func MakeArray(size int) []int {
 // RandomFillArray filling an array with random numbers
 func RandomFillArray(arr []int, rangeRandom int) []int {
 
-	rand.Seed(time.Now().Unix())
 	for i := 0; i < len(arr); i++ {
 		arr[i] = rand.Intn(rangeRandom)
 	}
@@ -126,45 +124,3 @@ func MinMax(array []float64) (min float64, max float64) {
 	}
 	return min, max
 }
-
-// Example test usage.
-//func Example() {
-//
-//	//------- Quick Sort
-//	var x2 = MakeArray(10)
-//	RandomFillArray(x2, 1000)
-//	fmt.Println(x2)
-//	fmt.Println(QuickSort(x2))
-//
-//	//----- Hash -------------
-//	m := make(map[string]int)
-//	m1 := new(map[string]int)
-//	var m2 map[string]int
-//	m3 := map[string]int{"apple": 99, "orange": 100}
-//
-//	// Insert data
-//	m3["carrot"] = 101
-//
-//	// Delete data
-//	delete(m3, "apple")
-//
-//	// Search data
-//	xx, aa := m3["orange"]
-//	fmt.Println("target value", xx, aa)
-//
-//	fmt.Println(m, m1, m2, m3)
-//
-//	// ---- Graph ---------------
-//	graph := make(map[string][]string)
-//	c := make(chan string, 300)
-//
-//	graph["you"] = []string{"video", "audio", "tv"}
-//	graph["pat"] = []string{"js", "php", "nodajs"}
-//	graph["danya"] = []string{"qa", "test", "graph"}
-//	graph["max"] = []string{}
-//
-//	fmt.Println("Test Graph", graph)
-//	// Pipe
-//	c <- graph["you"][0]
-//	fmt.Println(<-c)
-//}

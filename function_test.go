@@ -64,3 +64,11 @@ func TestQuickSort(t *testing.T) {
 	fmt.Println(resultArray)
 	assert.Equal(t, sortArray, resultArray)
 }
+
+func BenchmarkDecode(b *testing.B) {
+	var x int
+	for i := 0; i < b.N; i++ {
+		x = i
+	}
+	fmt.Println(x)
+}
