@@ -124,11 +124,3 @@ func MinMax(array []float64) (min float64, max float64) {
 	}
 	return min, max
 }
-
-func EmptyFunc() {
-
-}
-
-func EmptyFunc2() {
-
-}
