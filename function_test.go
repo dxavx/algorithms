@@ -1,8 +1,8 @@
 package algorithms
 
 import (
-	"fmt"
 	"github.com/stretchr/testify/assert"
+	"log"
 	"testing"
 )
 
@@ -69,5 +69,20 @@ func BenchmarkDecode(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		x = i
 	}
-	fmt.Println(x)
+	b.Log(x)
+}
+
+func BenchmarkDecodeParallel(b *testing.B) {
+	var i int
+	b.N = 1
+	b.RunParallel(func(pb *testing.PB) {
+		log.Println("I=", i)
+		for pb.Next() {
+			i++
+			log.Println("NEXT=", i)
+			//if i == 1 {
+			//	pb.Next()
+			//}
+		}
+	})
 }
